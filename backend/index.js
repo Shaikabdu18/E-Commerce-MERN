@@ -1,11 +1,17 @@
 import express from "express"
 import mongoose  from "mongoose";
 import dotenv from "dotenv"
-
+import authroutes from "./routes/authRoutes.js"
 
 
 const app = express();
 dotenv.config()
+app.use(express.json());
+
+//middleware
+app.use("/api/auth",authroutes)
+
+
 
 
 //Connect Mongodb
