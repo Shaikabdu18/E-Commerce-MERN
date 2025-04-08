@@ -1,10 +1,19 @@
 import './App.css'
+import { Routes, Route } from 'react-router-dom';
+import Login from './Pages/authentication/Login';
+import Signup from './Pages/authentication/Signup';
+import Home from './Pages/Home';
+
 
 function App() {
 
   return (
     <>
-     <h1 className='text-5xl text-center p-50'>E-Commerce MERN</h1>
+     <Routes>
+      <Route path='/'  element={<Home />} />
+      <Route path='login' element={<Login />} /> 
+      <Route path='signup' element={<Signup />} /> 
+     </Routes>
     </>
   )
 }
